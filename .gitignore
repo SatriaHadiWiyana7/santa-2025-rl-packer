@@ -1,0 +1,28 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual Environment
+venv/
+env/
+.env
+
+# Data files 
+data/raw/*.csv
+data/processed/*.csv
+# Kecuali sample kecil jika mau:
+!data/raw/sample_submission.csv
+
+# Models
+models/*.zip
+models/*.pkl
+
+# Submission files
+submissions/*.csv
+
+# VS Code settings
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
