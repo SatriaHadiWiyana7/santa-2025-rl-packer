@@ -1,0 +1,9 @@
+numpy
+pandas
+matplotlib
+shapely
+gymnasium
+stable-baselines3
+shimmy
+scipy
+tqdm
