@@ -25,3 +25,22 @@ def get_tree_polygon():
         (-top_w/4, tier_1_y), (-top_w/2, tier_1_y)
     ]
     return Polygon(coords)
+
+def create_polys_from_state(state, n_trees):
+    """
+    Mengubah array 1D (flat) menjadi list objek Polygon Shapely.
+    State format: [x1, y1, deg1, x2, y2, deg2, ...]
+    """
+    base_poly = get_tree_polygon()
+    polys = []
+    for i in range(n_trees):
+        idx = i * 3
+        x = state[idx]
+        y = state[idx+1]
+        deg = state[idx+2]
+        
+        # Rotasi dulu, baru translasi (geser)
+        p = affinity.rotate(base_poly, deg, origin=(0,0))
+        p = affinity.translate(p, x, y)
+        polys.append(p)
+    return polys
