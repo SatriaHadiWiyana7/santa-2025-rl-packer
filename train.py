@@ -103,7 +103,7 @@ def train_and_solve(n_trees_target):
 
 if __name__ == "__main__":
     # --- KONFIGURASI TARGET PUZZLE ---
-    TARGET_PUZZLES = range(1, 5) # 1 - 200
+    TARGET_PUZZLES = range(1, 51) # 1 - 200
     
     filename_json = "final_solutions_checkpoint.json"
     
