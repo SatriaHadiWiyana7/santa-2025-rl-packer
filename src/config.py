@@ -15,7 +15,7 @@ os.makedirs(SUBMISSIONS_DIR, exist_ok=True)
 
 # --- HYPERPARAMETERS (Pengaturan AI) ---
 RL_ALGORITHM = "PPO"
-TOTAL_TIMESTEPS = 50000  # Naikkan
+TOTAL_TIMESTEPS = 1000000  # Naikkan
 LEARNING_RATE = 0.0003
 N_STEPS = 2048           # Buffer size sebelum update
 BATCH_SIZE = 64
